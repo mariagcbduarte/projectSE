@@ -4,9 +4,6 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-import pt.ulisboa.tecnico.learnjava.bank.domain.Bank;
-import pt.ulisboa.tecnico.learnjava.bank.domain.Bank.AccountType;
-import pt.ulisboa.tecnico.learnjava.bank.domain.Client;
 import pt.ulisboa.tecnico.learnjava.bank.exceptions.AccountException;
 import pt.ulisboa.tecnico.learnjava.bank.exceptions.BankException;
 import pt.ulisboa.tecnico.learnjava.bank.exceptions.ClientException;
@@ -85,13 +82,13 @@ public class Controller {
 		mbWayAssociations = new TreeMap<String, String>();
 
 		// PARA EFEITOS DE TESTE
-		Bank bank = new Bank("CGD");
-		bank.addClient(new Client(bank, "Maria", "Leal", "123456789", "937765498", "Entroncamento Sem Fim", 68));
-		bank.addClient(new Client(bank, "Quim", "Barreiros", "123456123", "937896498", "Peitos da Cabritinha", 45));
-		bank.addClient(new Client(bank, "Rosinha", "Ameijoa", "123123789", "915987456", "Manha Fria de Inverno", 38));
-		bank.createAccount(AccountType.CHECKING, bank.getClientByNif("123456789"), 100, 0);
-		bank.createAccount(AccountType.CHECKING, bank.getClientByNif("123456123"), 100, 0);
-		bank.createAccount(AccountType.CHECKING, bank.getClientByNif("123123789"), 100, 0);
+//		Bank bank = new Bank("CGD");
+//		bank.addClient(new Client(bank, "Maria", "Leal", "123456789", "937765498", "Entroncamento Sem Fim", 68));
+//		bank.addClient(new Client(bank, "Quim", "Barreiros", "123456123", "937896498", "Peitos da Cabritinha", 45));
+//		bank.addClient(new Client(bank, "Rosinha", "Ameijoa", "123123789", "915987456", "Manha Fria de Inverno", 38));
+//		bank.createAccount(AccountType.CHECKING, bank.getClientByNif("123456789"), 100, 0);
+//		bank.createAccount(AccountType.CHECKING, bank.getClientByNif("123456123"), 100, 0);
+//		bank.createAccount(AccountType.CHECKING, bank.getClientByNif("123123789"), 100, 0);
 
 		while (true) {
 			Scanner sc = new Scanner(System.in);

@@ -10,20 +10,19 @@ import pt.ulisboa.tecnico.learnjava.bank.exceptions.ClientException;
 
 public class Client {
 	private final Set<Account> accounts = new HashSet<Account>();
-
-	private final Bank bank;
 	private final String firstName;
 	private final String lastName;
-	private final String nif;
 	private final String phoneNumber;
 	private final String address;
+	private final String nif;
+
+	private final Bank bank;
 	private int age;
 	private String code;
 
 	public Client(Bank bank, String firstName, String lastName, String nif, String phoneNumber, String address, int age)
 			throws ClientException {
 		checkParameters(bank, nif, phoneNumber, age);
-
 		this.bank = bank;
 		this.firstName = firstName;
 		this.lastName = lastName;
