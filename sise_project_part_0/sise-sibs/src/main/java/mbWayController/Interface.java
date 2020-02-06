@@ -1,4 +1,4 @@
-package controller;
+package mbWayController;
 
 public class Interface {
 
