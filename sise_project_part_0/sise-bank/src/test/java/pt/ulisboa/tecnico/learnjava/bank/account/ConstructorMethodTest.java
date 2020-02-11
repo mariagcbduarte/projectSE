@@ -43,7 +43,7 @@ public class ConstructorMethodTest {
 			new CheckingAccount(null, AMOUNT);
 			fail();
 		} catch (AccountException e) {
-			// passes
+			assertEquals(0, this.bank.getTotalNumberOfAccounts());
 		}
 	}
 

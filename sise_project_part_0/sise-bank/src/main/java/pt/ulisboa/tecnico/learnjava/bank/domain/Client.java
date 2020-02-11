@@ -14,8 +14,8 @@ public class Client {
 	private final String lastName;
 	private final String phoneNumber;
 	private final String address;
-	private final String nif;
 
+	private final String nif;
 	private final Bank bank;
 	private int age;
 	private String code;

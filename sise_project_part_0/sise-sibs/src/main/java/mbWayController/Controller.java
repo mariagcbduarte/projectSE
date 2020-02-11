@@ -13,11 +13,10 @@ import pt.ulisboa.tecnico.learnjava.sibs.exceptions.SibsException;
 
 public class Controller {
 	static boolean splitBillMode = false;
-	private static TreeMap<String, String> mbWayAssociations;
+	public static TreeMap<String, String> mbWayAssociations;
 	private static SplitBillController currentSplitBill;
 
 	public static void mbWayController(String command, Sibs sibs) throws SibsException {
-
 		String[] line = command.split(" ", 0);
 		String currentCommand = line[0];
 
@@ -35,17 +34,15 @@ public class Controller {
 			break;
 
 		case "associate-mbway":
-			// line[1] = iban, line[2] = phonenumber (o que queremos como chave para
-			// procurar values que sao ibans)
-
+			// line[1] = iban (values), line[2] = phone number (o que queremos como chave
+			// para procurar values)
 			new AssociateMbWayController(line[1], line[2], sibs.getServices());
 			mbWayAssociations.put(line[2], line[1]);
-			System.out.println(mbWayAssociations.toString());
+			// System.out.println(mbWayAssociations.toString());
 			break;
 
 		case "confirm-mbway":
-			// line[1] = phone, line[2] = confirmation code
-
+			// line[1] = phone number, line[2] = confirmation code
 			new ConfirmMbWayController(mbWayAssociations.get(line[1]), line[2], sibs.getServices());
 			break;
 
